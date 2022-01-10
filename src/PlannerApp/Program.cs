@@ -1,10 +1,13 @@
+using AKSoftware.Localization.MultiLanguages;
+using Blazored.LocalStorage;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using System.Threading.Tasks;
 using MudBlazor.Services;
 using System;
 using System.Net.Http;
-using Blazored.LocalStorage;
+using System.Reflection;
+using System.Threading.Tasks;
 
 namespace PlannerApp
 {
@@ -28,6 +31,11 @@ namespace PlannerApp
 
             builder.Services.AddBlazoredLocalStorage();
 
+            builder.Services.AddAuthorizationCore();
+            builder.Services.AddScoped<AuthenticationStateProvider, JwtAuthenticationStateProvider>();
+
+
+            builder.Services.AddLanguageContainer(Assembly.GetExecutingAssembly());
             await builder.Build().RunAsync();
         }
     }

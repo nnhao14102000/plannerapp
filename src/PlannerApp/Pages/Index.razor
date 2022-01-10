@@ -1,8 +1,17 @@
 ﻿@page "/"
+@using Microsoft.AspNetCore.Components.Authorization
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
-A
+
+<AuthorizeView>
+    <Authorized>
+        <h2>Welcome @context.User.FindFirst(System.Security.Claims.ClaimTypes.GivenName).Value </h2>
+    </Authorized>
+    <NotAuthorized>
+        <MudLink Href="/authentication/login">Login</MudLink>
+    </NotAuthorized>
+</AuthorizeView>
