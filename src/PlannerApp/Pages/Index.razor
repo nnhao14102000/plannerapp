@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
 
 <h1>Hello, world!</h1>
 
@@ -9,9 +10,9 @@ Welcome to your new app.
 
 <AuthorizeView>
     <Authorized>
-        <h2>Welcome @context.User.FindFirst(System.Security.Claims.ClaimTypes.GivenName).Value </h2>
+        <h2>Welcome @context.User.FindFirst(ClaimTypes.GivenName).Value </h2>
     </Authorized>
     <NotAuthorized>
-        <MudLink Href="/authentication/login">Login</MudLink>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Link="/authentication/login" Class="mt-lg-2 ml-2" >Login</MudButton>
     </NotAuthorized>
 </AuthorizeView>
