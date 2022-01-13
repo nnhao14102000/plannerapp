@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using MudBlazor.Services;
+using PlannerApp.Client.Services;
 using System;
 using System.Net.Http;
 using System.Reflection;
@@ -33,7 +34,7 @@ namespace PlannerApp
 
             builder.Services.AddAuthorizationCore();
             builder.Services.AddScoped<AuthenticationStateProvider, JwtAuthenticationStateProvider>();
-
+            builder.Services.AddHttpClientService();
 
             builder.Services.AddLanguageContainer(Assembly.GetExecutingAssembly());
             await builder.Build().RunAsync();

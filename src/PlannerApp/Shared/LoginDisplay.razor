@@ -8,7 +8,7 @@
     <Authorized>
         <MudMenu FullWidth="true">
             <ActivatorContent>
-                <MudButton Variant="Variant.Filled" Color="Color.Primary">Welcome @context.User.FindFirst(ClaimTypes.GivenName) </MudButton>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary">Welcome @context.User.FindFirst(ClaimTypes.GivenName).Value </MudButton>
             </ActivatorContent>
             <ChildContent>
                 <MudMenuItem OnClick="LogOutAsync" >Sign Out</MudMenuItem>
