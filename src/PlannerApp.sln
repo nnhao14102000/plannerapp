@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlannerApp", "PlannerApp\Pl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlannerApp.Shared", "PlannerApp.Shared\PlannerApp.Shared.csproj", "{7A7F38F1-88A5-4EBD-8420-4605F633A324}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlannerApp.Client.Services", "PlannerApp.Client.Services\PlannerApp.Client.Services.csproj", "{59876D1E-F263-43E8-B743-E67528D1D58C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlannerApp.Client.Services", "PlannerApp.Client.Services\PlannerApp.Client.Services.csproj", "{59876D1E-F263-43E8-B743-E67528D1D58C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
