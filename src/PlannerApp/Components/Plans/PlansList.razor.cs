@@ -47,5 +47,17 @@ namespace PlannerApp.Components
             return null;
             _isBusy = false;
         }
+
+        private bool _isCardsViewEnable = true;
+
+        private void SetCardsView()
+        {
+            _isCardsViewEnable = true;
+        }
+
+        private void SetTableView()
+        {
+            _isCardsViewEnable = false;
+        }
     }
 }
