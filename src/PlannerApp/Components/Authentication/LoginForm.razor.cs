@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
-namespace PlannerApp.Components.Authentication
+namespace PlannerApp.Components
 {
     public partial class LoginForm: ComponentBase
     {

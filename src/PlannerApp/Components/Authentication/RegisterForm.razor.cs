@@ -5,7 +5,7 @@ using PlannerApp.Shared.Models;
 using System;
 using System.Threading.Tasks;
 
-namespace PlannerApp.Components.Authentication
+namespace PlannerApp.Components
 {
     public partial class RegisterForm
     {
