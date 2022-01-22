@@ -1,8 +1,5 @@
 ﻿@namespace PlannerApp.Components
 
-<div class="mt-4" />
-<MudText Typo="Typo.h4">My plans</MudText>
-
 <MudIconButton Icon="@Icons.Material.Filled.GridView" Color="Color.Primary" Disabled="_isCardsViewEnable" OnClick="SetCardsView"></MudIconButton>
 <MudIconButton Icon="@Icons.Material.Filled.TableView" Color="Color.Primary" Disabled="@(!_isCardsViewEnable)" OnClick="SetTableView"></MudIconButton>
 

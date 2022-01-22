@@ -36,6 +36,7 @@ namespace PlannerApp.Components
         private void OnSearch(string query)
         {
             _query = query;
+            _table.ReloadServerData();
         }
 
     }
